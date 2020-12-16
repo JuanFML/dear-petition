@@ -135,8 +135,7 @@ class AOCFormCR287(PetitionForm):
             self.data[f"ArrestDate:{i}"] = self.format_date(ciprs_record.arrest_date)
             self.data[f"Description:{i}"] = offense_record.description
             self.data[f"DOOF:{i}"] = self.format_date(ciprs_record.offense_date)
-            self.data[f"Disposition:{i}"] = self.disposition_code(offense)
-            self.data[f"DispositionDate:{i}"] = self.format_date(offense.disposed_on)
+            self.data[f"DismissalDate:{i}"] = self.format_date(offense.disposed_on)
 
 
 class AOCFormCR285(AOCFormCR287):
